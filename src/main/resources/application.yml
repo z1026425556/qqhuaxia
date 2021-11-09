@@ -11,7 +11,7 @@ server:
   port: 8080
 
 mybatis:
-  mapper-locations: classpath:mapping/*Mapper.xml
+  mapper-locations: classpath:mapping/*Mapper.xml,classpath:mapping/*/*Mapper.xml
   type-aliases-package: com.pengcheng.domain
 
 #showSql
