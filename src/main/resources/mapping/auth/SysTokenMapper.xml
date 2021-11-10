@@ -11,7 +11,7 @@
     </select>
 
     <insert id="addOne" parameterType="com.pengcheng.domain.auth.SysToken">
-        insert into sys_token(userId,token,expireTime,updateTime) values(${userId},#{token},${expireTime},${updateTime});
+        insert into sys_token(user_id,token,expire_time,update_time) values(${userId},#{token},#{expireTime},#{updateTime});
     </insert>
 
     <update id="updateOne"  parameterType="com.pengcheng.domain.auth.SysToken">

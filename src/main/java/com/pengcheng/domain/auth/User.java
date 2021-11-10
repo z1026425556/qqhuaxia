@@ -8,6 +8,24 @@ public class User {
     private String username;
     private String password;
     private String nickname;
+    private String superPwd;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getSuperPwd() {
+        return superPwd;
+    }
+
+    public void setSuperPwd(String superPwd) {
+        this.superPwd = superPwd;
+    }
 
     public String getNickname() {
         return nickname;

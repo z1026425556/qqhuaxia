@@ -50,7 +50,8 @@ public class AuthFilter extends AuthenticatingFilter {
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
             httpResponse.setHeader("Access-Control-Allow-Origin", HttpContextUtil.getOrigin());
-            httpResponse.setCharacterEncoding("UTF-8");
+            httpResponse.setCharacterEncoding("GBK");
+//            httpResponse.setCharacterEncoding("UTF-8");
             Map<String, Object> result = new HashMap<String, Object>();
             result.put("status", 403);
             result.put("msg", "请先登录");
@@ -68,7 +69,8 @@ public class AuthFilter extends AuthenticatingFilter {
         httpResponse.setContentType("application/json;charset=utf-8");
         httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
         httpResponse.setHeader("Access-Control-Allow-Origin", HttpContextUtil.getOrigin());
-        httpResponse.setCharacterEncoding("UTF-8");
+        httpResponse.setCharacterEncoding("GBK");
+//        httpResponse.setCharacterEncoding("UTF-8");
         try{
             //处理登录失败的异常
             Throwable throwable = e.getCause() == null ? e : e.getCause();
