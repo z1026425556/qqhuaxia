@@ -73,6 +73,11 @@ public class ShiroServiceImpl implements IShiroService {
         return userMapper.findUserById(userId);
     }
 
+    @Override
+    public User findByAccessToken(String accessToken) {
+        return userMapper.findUserById(sysTokenMapper.findByToken(accessToken).getUserId());
+    }
+
 
 }
 

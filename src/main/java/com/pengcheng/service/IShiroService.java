@@ -18,4 +18,6 @@ public interface IShiroService {
 
     User findByUserId(Long userId);
 
+    User findByAccessToken(String accessToken);
+
 }

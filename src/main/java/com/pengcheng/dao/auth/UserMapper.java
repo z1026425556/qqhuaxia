@@ -13,4 +13,6 @@ public interface UserMapper {
 
     void addOne(User user);
 
+    void updateOne(User user);
+
 }

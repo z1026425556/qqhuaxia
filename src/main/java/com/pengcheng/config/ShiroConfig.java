@@ -30,17 +30,23 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<String, String>();
         //anno：所有人都可以访问，auth：只有有权限(登陆过)的才可以访问
         filterMap.put("/css/*", "anon");
+        filterMap.put("/css/*/*", "anon");
         filterMap.put("/font/*", "anon");
+        filterMap.put("/font/*/*", "anon");
         filterMap.put("/image/*", "anon");
+        filterMap.put("/image/*/*", "anon");
         filterMap.put("/js/*", "anon");
         filterMap.put("/js/*/*", "anon");
         filterMap.put("/favicon.ico", "anon");
         filterMap.put("/html/loginLogout/register.html", "anon");
         filterMap.put("/html/loginLogout/login.html", "anon");
         filterMap.put("/html/loginLogout/resetPwd.html", "anon");
+        filterMap.put("/html/personalCenter/personalCenter.html", "anon");
         filterMap.put("/user/isHavingInviteCode", "anon");
         filterMap.put("/user/isExistUser", "anon");
         filterMap.put("/user/register", "anon");
+        filterMap.put("/user/login", "anon");
+        filterMap.put("/user/resetPwd", "anon");
         //除了以上路径，其他都需要权限验证
         filterMap.put("/**", "auth");
         shiroFilter.setFilterChainDefinitionMap(filterMap);

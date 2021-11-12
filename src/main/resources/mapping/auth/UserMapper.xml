@@ -3,15 +3,27 @@
 <mapper namespace="com.pengcheng.dao.auth.UserMapper">
 
     <select id="findByUsername" resultType="com.pengcheng.domain.auth.User">
-        select * from user where username=#{username};
+        select id,username,password,nickname,super_pwd as superPwd,status from user where username=#{username};
     </select>
 
     <select id="findUserById" resultType="com.pengcheng.domain.auth.User">
-        select * from user where id=${id};
+        select id,username,password,nickname,super_pwd as superPwd,status from user where id=${id};
     </select>
 
     <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.auth.User">
         insert into user(username,password,nickname,super_pwd,status) values(#{username},#{password},#{nickname},#{superPwd},#{status});
     </insert>
+
+    <update id="updateOne"  parameterType="com.pengcheng.domain.auth.User">
+        update user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="username!=null">username=#{username},</if>
+            <if test="password!=null">password=#{password},</if>
+            <if test="nickname!=null">nickname=#{nickname},</if>
+            <if test="superPwd!=null">super_pwd=#{superPwd},</if>
+            <if test="status!=null">status=#{status},</if>
+        </trim>
+        where id=${id};
+    </update>
 
 </mapper>

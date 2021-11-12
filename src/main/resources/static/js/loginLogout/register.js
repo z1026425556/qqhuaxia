@@ -107,8 +107,7 @@ function addEvent(){
                 inviteCode : $("#inviteCode").val()
             },
             success : function(data){
-                $.cookie("expire", data.data.expire);
-                $.cookie("token", data.data.token);
+                setCookie("token", data.data.token);
             }
         });
 

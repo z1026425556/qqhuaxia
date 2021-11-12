@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -40,6 +42,24 @@ public class UserController {
     @RequestMapping("/register")
     public ModelData register(User user, String inviteCode){
         return userService.register(user, inviteCode);
+    }
+
+    @ResponseBody
+    @RequestMapping("/login")
+    public ModelData login(User inputUser){
+        return userService.login(inputUser);
+    }
+
+    @ResponseBody
+    @RequestMapping("/resetPwd")
+    public ModelData resetPwd(User inputUser, String resetPwd){
+        return userService.resetPwd(inputUser, resetPwd);
+    }
+
+    @ResponseBody
+    @RequestMapping("/queryPersonalInfo")
+    public ModelData queryPersonalInfo(HttpServletRequest httpRequest){
+        return userService.queryPersonalInfo(httpRequest);
     }
 
 }

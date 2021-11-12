@@ -3,7 +3,8 @@ package com.pengcheng.service;
 import com.pengcheng.domain.InviteCode;
 import com.pengcheng.domain.ModelData;
 import com.pengcheng.domain.auth.User;
-import org.apache.ibatis.annotations.Param;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface IUserService {
 
@@ -12,5 +13,11 @@ public interface IUserService {
     User findByUsername(String username);
 
     ModelData register(User user, String inviteCode);
+
+    ModelData login(User inputUser);
+
+    ModelData resetPwd(User inputUser, String resetPwd);
+
+    ModelData queryPersonalInfo(HttpServletRequest httpRequest);
 
 }

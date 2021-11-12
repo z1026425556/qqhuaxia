@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengcheng.dao.WatchLinkmanMapper">
+
+    <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.WatchLinkman">
+        insert into watch_linkman(user_id,watch_count) values(${userId},${watchCount});
+    </insert>
+
+    <update id="updateOne"  parameterType="com.pengcheng.domain.WatchLinkman">
+        update watch_linkman
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userId!=null">user_id=${userId},</if>
+            <if test="watchCount!=null">watch_count=${watchCount},</if>
+        </trim>
+        where id=${id};
+    </update>
+
+    <select id="findByUserId" resultType="com.pengcheng.domain.WatchLinkman">
+        select id,user_id as userId,watch_count as watchCount from watch_linkman where user_id=${userId};
+    </select>
+
+</mapper>

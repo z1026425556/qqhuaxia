@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengcheng.dao.VipMapper">
+
+    <select id="findByUserId" resultType="com.pengcheng.domain.Vip">
+        select id,type,description,user_id as userId,buy_time as buyTime,expire_time as expireTime from vip where user_id=${userId};
+    </select>
+
+</mapper>

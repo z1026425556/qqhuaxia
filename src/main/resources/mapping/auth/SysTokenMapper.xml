@@ -3,11 +3,11 @@
 <mapper namespace="com.pengcheng.dao.auth.SysTokenMapper">
 
     <select id="findByToken" resultType="com.pengcheng.domain.auth.SysToken">
-        select * from sys_token where token=#{token};
+        select id,user_id as userId,token,expire_time as expireTime,update_time as updateTime from sys_token where token=#{token};
     </select>
 
     <select id="findByUserId" resultType="com.pengcheng.domain.auth.SysToken">
-        select * from sys_token where user_id=${userId};
+        select id,user_id as userId,token,expire_time as expireTime,update_time as updateTime from sys_token where user_id=${userId};
     </select>
 
     <insert id="addOne" parameterType="com.pengcheng.domain.auth.SysToken">
@@ -18,10 +18,10 @@
         update sys_token
         <trim prefix="set" suffixOverrides=",">
             <if test="token!=null">token=#{token},</if>
-            <if test="expireTime!=null">expireTime=${expireTime},</if>
-            <if test="updateTime!=null">updateTime=${updateTime},</if>
+            <if test="expireTime!=null">expire_time=#{expireTime},</if>
+            <if test="updateTime!=null">update_time=#{updateTime},</if>
         </trim>
-        where userId=${userId};
+        where user_id=${userId};
     </update>
 
 </mapper>

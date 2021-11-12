@@ -36,19 +36,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="header-left-bottom agileinfo">
 						<form action="#" method="post">
 							<div class="icon1">
-								<input type="username" placeholder="用户名" required=""/>
+								<input type="username" placeholder="用户名" required="" id="username" />
 							</div>
 							<div class="icon1">
-								<input type="username" placeholder="密保" required=""/>
+								<input type="username" placeholder="密保" required="" id="superPwd" />
 							</div>
 							<div class="icon1">
-								<input type="password" placeholder="新密码" required=""/>
+								<input type="password" placeholder="新密码" required="" id="password" />
 							</div>
 							<div class="icon1">
-								<input type="password" placeholder="确认密码" required=""/>
+								<input type="password" placeholder="确认密码" required="" id="resetPwd" />
 							</div>
 							<div class="bottom">
-								<input type="button" value="确认修改" />
+								<input type="button" value="确认修改" id="sure" />
 							</div>
 							<p>
 								<a href="login.html" class="w3top-nav-left">已有账号</a>
@@ -60,6 +60,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 	</div>
 
-	</div>	
+	</div>
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/loginLogout/resetPwd.js"></script>
 </body>
 </html>

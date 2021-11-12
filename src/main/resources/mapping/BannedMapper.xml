@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengcheng.dao.BannedMapper">
+
+    <select id="findByUserId" resultType="com.pengcheng.domain.Banned">
+        select id,user_id as userId,count,begin_time as beginTime,end_time as endTime,reason from banned where user_id=${userId};
+    </select>
+
+</mapper>

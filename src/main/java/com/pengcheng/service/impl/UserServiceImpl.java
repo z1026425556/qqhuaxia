@@ -1,15 +1,18 @@
 package com.pengcheng.service.impl;
 
-import com.pengcheng.dao.InviteCodeMapper;
+import com.pengcheng.dao.*;
 import com.pengcheng.dao.auth.UserMapper;
-import com.pengcheng.domain.InviteCode;
-import com.pengcheng.domain.ModelData;
+import com.pengcheng.domain.*;
 import com.pengcheng.domain.auth.User;
 import com.pengcheng.service.IShiroService;
 import com.pengcheng.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
 @Service
@@ -23,6 +26,15 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private IShiroService shiroService;
+
+    @Autowired
+    private VipMapper vipMapper;
+
+    @Autowired
+    private BannedMapper bannedMapper;
+
+    @Autowired
+    private WatchLinkmanMapper watchLinkmanMapper;
 
     @Override
     public InviteCode findByCode(String inviteCode) {
@@ -46,6 +58,88 @@ public class UserServiceImpl implements IUserService {
         result.msg = "注册成功！";
         result.data = tokenMap;
 
+        return result;
+    }
+
+    @Override
+    public ModelData login(User inputUser) {
+        ModelData result = new ModelData();
+        User user = userMapper.findByUsername(inputUser.getUsername());
+        if(user == null){
+            result.code = "411";
+            result.msg = "用户不存在！";
+            return result;
+        }
+        if(!user.getPassword().equals(inputUser.getPassword())){
+            result.code = "412";
+            result.msg = "密码错误！";
+            return result;
+        }
+        Map<String, Object> token = shiroService.createToken(user.getId());
+        result.code = "200";
+        result.msg = "登录成功";
+        result.data = token;
+        return result;
+    }
+
+    @Override
+    public ModelData resetPwd(User inputUser, String resetPwd) {
+        ModelData result = new ModelData();
+        User user = userMapper.findByUsername(inputUser.getUsername());
+        if(user == null){
+            result.code = "411";
+            result.msg = "用户不存在！";
+            return result;
+        }
+        if(!user.getSuperPwd().equals(inputUser.getSuperPwd())){
+            result.code = "413";
+            result.msg = "密保不正确！";
+            return result;
+        }
+        if(!inputUser.getPassword().equals(resetPwd)){
+            result.code = "414";
+            result.msg = "两次输入的密码不一致！";
+            return result;
+        }
+        user.setPassword(inputUser.getPassword());
+        userMapper.updateOne(user);
+        Map<String, Object> tokenData = shiroService.createToken(user.getId());
+        result.code = "200";
+        result.msg = "密码重置成功！";
+        result.data = tokenData;
+        return result;
+    }
+
+    @Override
+    public ModelData queryPersonalInfo(HttpServletRequest httpRequest) {
+        ModelData result = new ModelData();
+        PersonalInfo data = new PersonalInfo();
+        User user = shiroService.findByAccessToken(httpRequest.getHeader("token"));
+        data.nickname = user.getNickname();
+        data.username = user.getUsername();
+        Vip vip = vipMapper.findByUserId(user.getId());
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        if(vip == null){
+            data.type = "普通用户";
+        }else if(vip.getType().equals("0") && vip.getExpireTime().isAfter(LocalDateTime.now())){
+            data.type = "月卡会员";
+            data.vipExpireTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(vip.getExpireTime());
+        }else if(vip.getType().equals("1") && vip.getExpireTime().isAfter(LocalDateTime.now())){
+            data.type = "季卡会员";
+            data.vipExpireTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(vip.getExpireTime());
+        }else if(vip.getType().equals("2") && vip.getExpireTime().isAfter(LocalDateTime.now())){
+            data.type = "年卡会员";
+            data.vipExpireTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(vip.getExpireTime());
+        }else{
+            data.type = "普通用户";
+        }
+        Banned banned = bannedMapper.findByUserId(user.getId());
+        data.bannedCount = banned == null ? 0 : banned.getCount();
+        WatchLinkman watchLinkman = watchLinkmanMapper.findByUserId(user.getId());
+        data.watchCount = watchLinkman == null ? 0 : watchLinkman.getWatchCount();
+        result.code = "200";
+        result.msg = "查询成功！";
+        result.data = data;
         return result;
     }
 
