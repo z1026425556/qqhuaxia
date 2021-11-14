@@ -1,0 +1,15 @@
+body{
+    background: none;
+    color: #333;
+}
+.selectArea{
+    width: 68px;
+    height: 40px;
+    display: inline-block;
+}
+.bigArea{
+    width: 620px;
+    margin: 30px auto;
+    display: inline-block;
+    vertical-align: top;
+}

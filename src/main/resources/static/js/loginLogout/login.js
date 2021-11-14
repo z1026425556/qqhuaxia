@@ -51,6 +51,12 @@ function addEvent(){
         });
     });
 
+    $("#password").keyup(function (event) {
+        if(event.keyCode == 13){
+            $("#login").click();
+        }
+    });
+
 }
 
 function addData(){

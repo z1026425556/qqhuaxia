@@ -9,6 +9,24 @@ public class PersonalInfo {
     public Integer bannedCount;     //被封次数
     public Integer watchCount;      //剩余查看次数
     public String vipExpireTime;    //会员到期时间
+    public Integer monthCount;       //本月签到天数
+    public Boolean todaySignIn;     //今日是否已签到
+
+    public Integer getMonthCount() {
+        return monthCount;
+    }
+
+    public void setMonthCount(Integer monthCount) {
+        this.monthCount = monthCount;
+    }
+
+    public Boolean getTodaySignIn() {
+        return todaySignIn;
+    }
+
+    public void setTodaySignIn(Boolean todaySignIn) {
+        this.todaySignIn = todaySignIn;
+    }
 
     public String getVipExpireTime() {
         return vipExpireTime;

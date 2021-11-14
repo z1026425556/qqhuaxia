@@ -9,4 +9,8 @@ public interface VipMapper {
 
     Vip findByUserId(@Param("userId") Long userId);
 
+    void addOne(Vip vip);
+
+    void updateOne(Vip vip);
+
 }

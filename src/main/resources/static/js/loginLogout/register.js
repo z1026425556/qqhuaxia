@@ -58,6 +58,11 @@ function addEvent(){
             alert("昵称过长，请保持在8个字符之内！");
             return;
         }
+        //判断微信是否为空
+        if($("#wxNumber").val() == ""){
+            alert("微信不能为空！");
+            return;
+        }
 
         //判断用户名是否已经被注册了
         var userIsExist = false;
@@ -104,7 +109,8 @@ function addEvent(){
                 password : $("#password").val(),
                 nickname : $("#nickname").val(),
                 superPwd : $("#superPwd").val(),
-                inviteCode : $("#inviteCode").val()
+                inviteCode : $("#inviteCode").val(),
+                wxNumber : $("#wxNumber").val()
             },
             success : function(data){
                 setCookie("token", data.data.token);

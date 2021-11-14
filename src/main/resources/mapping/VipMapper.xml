@@ -6,4 +6,20 @@
         select id,type,description,user_id as userId,buy_time as buyTime,expire_time as expireTime from vip where user_id=${userId};
     </select>
 
+    <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.Vip">
+        insert into vip(type,description,user_id,buy_time,expire_time) values(#{type},#{description},${userId},#{buyTime},#{expireTime});
+    </insert>
+
+    <update id="updateOne" parameterType="com.pengcheng.domain.Vip">
+        update vip
+        <trim prefix="set" suffixOverrides=",">
+            <if test="type!=null">type=#{type},</if>
+            <if test="description!=null">description=#{description},</if>
+            <if test="userId!=null">user_id=${userId},</if>
+            <if test="buyTime!=null">buy_time=#{buyTime},</if>
+            <if test="expireTime!=null">expire_time=#{expireTime},</if>
+        </trim>
+        where id=${id};
+    </update>
+
 </mapper>

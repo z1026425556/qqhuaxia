@@ -3,15 +3,15 @@
 <mapper namespace="com.pengcheng.dao.auth.UserMapper">
 
     <select id="findByUsername" resultType="com.pengcheng.domain.auth.User">
-        select id,username,password,nickname,super_pwd as superPwd,status from user where username=#{username};
+        select id,username,password,nickname,super_pwd as superPwd,status,wx_number as wxNumber from user where username=#{username};
     </select>
 
     <select id="findUserById" resultType="com.pengcheng.domain.auth.User">
-        select id,username,password,nickname,super_pwd as superPwd,status from user where id=${id};
+        select id,username,password,nickname,super_pwd as superPwd,status,wx_number as wxNumber from user where id=${id};
     </select>
 
     <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.auth.User">
-        insert into user(username,password,nickname,super_pwd,status) values(#{username},#{password},#{nickname},#{superPwd},#{status});
+        insert into user(username,password,nickname,super_pwd,status,wx_number) values(#{username},#{password},#{nickname},#{superPwd},#{status},#{wxNumber});
     </insert>
 
     <update id="updateOne"  parameterType="com.pengcheng.domain.auth.User">
@@ -22,8 +22,13 @@
             <if test="nickname!=null">nickname=#{nickname},</if>
             <if test="superPwd!=null">super_pwd=#{superPwd},</if>
             <if test="status!=null">status=#{status},</if>
+            <if test="wxNumber!=null">wx_number=#{wxNumber},</if>
         </trim>
         where id=${id};
     </update>
+
+    <select id="findRoleByUserId" resultType="com.pengcheng.domain.auth.Role">
+        select c.id,c.role_name as roleName from user a inner join user_role_re b on a.id=b.user_id inner join role c on c.id=b.role_id where a.id=${id};
+    </select>
 
 </mapper>

@@ -1,10 +1,15 @@
 package com.pengcheng.domain;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 public class WatchLinkman {
 
     private Long id;
     private Long userId;
     private Integer watchCount;
+
 
     public Long getId() {
         return id;

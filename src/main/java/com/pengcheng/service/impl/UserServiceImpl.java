@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
@@ -35,6 +37,9 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private WatchLinkmanMapper watchLinkmanMapper;
+
+    @Autowired
+    private SignInMapper signInMapper;
 
     @Override
     public InviteCode findByCode(String inviteCode) {
@@ -118,7 +123,6 @@ public class UserServiceImpl implements IUserService {
         data.nickname = user.getNickname();
         data.username = user.getUsername();
         Vip vip = vipMapper.findByUserId(user.getId());
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if(vip == null){
             data.type = "普通用户";
         }else if(vip.getType().equals("0") && vip.getExpireTime().isAfter(LocalDateTime.now())){
@@ -137,6 +141,20 @@ public class UserServiceImpl implements IUserService {
         data.bannedCount = banned == null ? 0 : banned.getCount();
         WatchLinkman watchLinkman = watchLinkmanMapper.findByUserId(user.getId());
         data.watchCount = watchLinkman == null ? 0 : watchLinkman.getWatchCount();
+        SignIn signIn = signInMapper.findByUserId(user.getId());
+        if(null != signIn){
+            //获取当月第一天0时的时间
+            LocalDateTime mouthFirstTime = LocalDateTime.of(LocalDate.from(LocalDateTime.now().withDayOfMonth(1)), LocalTime.MIN);
+            if(signIn.getUpdateTime().isBefore(mouthFirstTime)){
+                data.monthCount = 0;
+            }else{
+                data.monthCount = signIn.getMonthCount();
+            }
+            data.todaySignIn = signIn.getUpdateTime().isBefore(LocalDateTime.of(LocalDate.from(LocalDateTime.now()), LocalTime.MIN)) ? false : true;
+        }else{
+            data.monthCount = 0;
+            data.todaySignIn = false;
+        }
         result.code = "200";
         result.msg = "查询成功！";
         result.data = data;

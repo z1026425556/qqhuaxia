@@ -3,6 +3,7 @@ package com.pengcheng.controller;
 import com.pengcheng.domain.InviteCode;
 import com.pengcheng.domain.ModelData;
 import com.pengcheng.domain.auth.User;
+import com.pengcheng.service.ISigninService;
 import com.pengcheng.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,9 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
+
+    @Autowired
+    private ISigninService signinService;
 
     @ResponseBody
     @RequestMapping("/isExistUser")
@@ -60,6 +64,12 @@ public class UserController {
     @RequestMapping("/queryPersonalInfo")
     public ModelData queryPersonalInfo(HttpServletRequest httpRequest){
         return userService.queryPersonalInfo(httpRequest);
+    }
+
+    @ResponseBody
+    @RequestMapping("/sign")
+    public ModelData sign(HttpServletRequest httpRequest) {
+        return signinService.sign(httpRequest);
     }
 
 }

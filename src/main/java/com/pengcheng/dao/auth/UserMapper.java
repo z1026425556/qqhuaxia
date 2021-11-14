@@ -1,5 +1,6 @@
 package com.pengcheng.dao.auth;
 
+import com.pengcheng.domain.auth.Role;
 import com.pengcheng.domain.auth.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -14,5 +15,7 @@ public interface UserMapper {
     void addOne(User user);
 
     void updateOne(User user);
+
+    Role findRoleByUserId(@Param("id") Long id);
 
 }

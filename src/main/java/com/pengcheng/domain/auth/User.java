@@ -10,6 +10,15 @@ public class User {
     private String nickname;
     private String superPwd;
     private String status;
+    private String wxNumber;
+
+    public String getWxNumber() {
+        return wxNumber;
+    }
+
+    public void setWxNumber(String wxNumber) {
+        this.wxNumber = wxNumber;
+    }
 
     public String getStatus() {
         return status;

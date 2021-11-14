@@ -3,21 +3,21 @@
 <mapper namespace="com.pengcheng.dao.SignInMapper">
 
     <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.SignIn">
-        insert into sign_in(user_id,mouth_count,update_time) values(${userId},${mouthCount},#{updateTime});
+        insert into sign_in(user_id,month_count,update_time) values(${userId},${monthCount},#{updateTime});
     </insert>
 
-    <update id="updateOne"  parameterType="com.pengcheng.domain.SignIn">
+    <update id="updateOne" parameterType="com.pengcheng.domain.SignIn">
         update sign_in
         <trim prefix="set" suffixOverrides=",">
             <if test="userId!=null">user_id=${userId},</if>
-            <if test="mouthCount!=null">mouth_count=${mouthCount},</if>
+            <if test="monthCount!=null">month_count=${monthCount},</if>
             <if test="updateTime!=null">update_time=#{updateTime},</if>
         </trim>
         where id=${id};
     </update>
 
     <select id="findByUserId" resultType="com.pengcheng.domain.SignIn">
-        select id,user_id as userId,mouth_count as mouthCount,update_time as updateTime from sign_in where user_id=${userId};
+        select id,user_id as userId,month_count as monthCount,update_time as updateTime from sign_in where user_id=${userId};
     </select>
 
 </mapper>

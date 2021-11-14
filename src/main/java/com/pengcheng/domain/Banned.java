@@ -1,6 +1,8 @@
 package com.pengcheng.domain;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Banned {
 
@@ -10,7 +12,6 @@ public class Banned {
     private LocalDateTime beginTime;
     private LocalDateTime endTime;
     private String reason;
-
     public Long getId() {
         return id;
     }

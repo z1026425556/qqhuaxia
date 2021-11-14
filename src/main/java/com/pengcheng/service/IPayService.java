@@ -1,14 +1,14 @@
 package com.pengcheng.service;
 
-
+import com.pengcheng.domain.ModelData;
 import com.pengcheng.domain.PayCallback;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface IPayService {
 
-    void insertPayOrder(PayCallback order);
+    void createPayRecord(PayCallback payCallback);
 
-    String querySuccessWX(String zzfOId);
-
-    String queryWX(Long oId);
+    ModelData queryPayResult(HttpServletRequest httpRequest);
 
 }
