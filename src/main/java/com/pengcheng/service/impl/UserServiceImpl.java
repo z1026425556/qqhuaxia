@@ -161,4 +161,19 @@ public class UserServiceImpl implements IUserService {
         return result;
     }
 
+    @Override
+    public ModelData logout(HttpServletRequest httpRequest) {
+        ModelData result = new ModelData();
+        try{
+            shiroService.logout(httpRequest.getHeader("token"));
+        }catch(Exception e){
+            result.code = "500";
+            result.msg = "服务器繁忙，请稍后重试！";
+            return result;
+        }
+        result.code = "200";
+        result.msg = "登出成功！";
+        return result;
+    }
+
 }

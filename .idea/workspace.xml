@@ -2,51 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4097420f-bfad-4f45-8ec3-c9c7335d7eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/SellOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/AreaMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/PayMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Pay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/ISellOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/ISigninService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IWatchLinkmanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/SellOrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/SigninServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/WatchLinkmanServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/util/ArrayUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/AreaMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/PayMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/handBtn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/icheck.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/icommon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/html/sell/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/icon-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/zhifubao.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/icheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/config/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/VipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/VipMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/auth/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/auth/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Banned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Banned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/PayOrder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/PersonalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/WatchLinkman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/WatchLinkman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/auth/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/auth/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IPayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IPayService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/PayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/PayServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/SignInMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/SignInMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/VipMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/VipMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/auth/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/auth/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/loginLogout/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/loginLogout/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/personalCenter/personalCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/personalCenter/personalCenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/sell/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/sell/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/personalCenter/personalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/personalCenter/personalCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/sell/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +131,8 @@
       <workItem from="1636724723380" duration="740000" />
       <workItem from="1636767515828" duration="10299000" />
       <workItem from="1636846246386" duration="29462000" />
-      <workItem from="1636893712908" duration="4975000" />
+      <workItem from="1636893712908" duration="5171000" />
+      <workItem from="1636946179717" duration="4063000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交代码">
       <created>1636002850894</created>
@@ -210,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636724839878</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="会员中心和签到以及售卖列表(主页)一部分">
+      <created>1636899355681</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636899355681</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +196,8 @@
     <MESSAGE value="shiro搭建(第一部分)" />
     <MESSAGE value="注册功能" />
     <MESSAGE value="token过期转登录跳转及忘记密码和登录的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="token过期转登录跳转及忘记密码和登录的功能" />
+    <MESSAGE value="会员中心和签到以及售卖列表(主页)一部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="会员中心和签到以及售卖列表(主页)一部分" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1636459133807">
@@ -238,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1636518439382" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1636896604386">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1636957285348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1636896604386" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1636957285348" />
     <state x="739" y="378" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636199146555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,10 +224,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636783548413" />
-    <state x="560" y="115" key="CommitChangelistDialog2" timestamp="1636724832669">
+    <state x="560" y="115" key="CommitChangelistDialog2" timestamp="1636899350644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1636724832669" />
+    <state x="560" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1636899350644" />
     <state width="438" height="466" key="DebuggerActiveHint" timestamp="1636547804385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -262,54 +236,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1636716452207" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1636958738507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1636958738507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1636958738507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1636958738507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1636898265736">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265736" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1636898265735">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265735" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1636898265736">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265736" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1636898265736">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265736" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1636898265736">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265736" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1636898265736">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1636958738391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636898265736" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
     <state x="531" y="182" key="Registry" timestamp="1636509847956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -318,10 +292,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1636509878430" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636724844096">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636899359387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636724844096" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636899359387" />
     <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1636690151105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

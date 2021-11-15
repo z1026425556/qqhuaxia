@@ -20,4 +20,6 @@ public interface IUserService {
 
     ModelData queryPersonalInfo(HttpServletRequest httpRequest);
 
+    ModelData logout(HttpServletRequest httpRequest);
+
 }

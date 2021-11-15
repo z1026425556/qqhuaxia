@@ -9,6 +9,7 @@ $(function () {
 });
 
 function addEvent() {
+    addHeaderEvent();
     $("#personalInfo").addClass("current");
     $(".text-content").hide();
     $("#personalInfoContent").show();
@@ -72,6 +73,7 @@ function addEvent() {
 }
 
 function addData() {
+    addHeaderData();
     $.ajax({
         url : "/user/queryPersonalInfo",
         async : false,

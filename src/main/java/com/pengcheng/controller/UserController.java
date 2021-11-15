@@ -72,6 +72,12 @@ public class UserController {
         return signinService.sign(httpRequest);
     }
 
+    @ResponseBody
+    @RequestMapping("/logout")
+    public ModelData logout(HttpServletRequest httpRequest){
+        return userService.logout(httpRequest);
+    }
+
 }
 
 

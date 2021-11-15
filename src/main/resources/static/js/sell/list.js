@@ -7,12 +7,14 @@ $(function(){
 });
 
 function addEvent(){
+    addHeaderEvent();
     $("#viewMoreAreaBtn").click(function(){
         $(".behindArea").show();
     });
 }
 
 function addData() {
+    addHeaderData();
     //加载大区
     $.ajax({
         url : "/sellOrder/listArea",

@@ -40,11 +40,11 @@ function addEvent(){
                 if(data.code == "200"){
                     setCookie("token", data.data.token);
                 }
-                path = window.atob(getQueryString("path"));
-                if(!path){
+                if(!getQueryString("path")){
                     //跳转到主页
-
+                    window.location.href = "/html/sell/list.html";
                 }else{
+                    path = window.atob(getQueryString("path"));
                     window.location.href = path;
                 }
             }
