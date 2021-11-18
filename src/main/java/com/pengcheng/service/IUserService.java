@@ -22,4 +22,6 @@ public interface IUserService {
 
     ModelData logout(HttpServletRequest httpRequest);
 
+    User findByAccessToken(HttpServletRequest httpRequest);
+
 }

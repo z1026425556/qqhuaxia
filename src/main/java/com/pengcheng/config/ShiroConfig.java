@@ -37,6 +37,8 @@ public class ShiroConfig {
         filterMap.put("/font/*/*", "anon");
         filterMap.put("/image/*", "anon");
         filterMap.put("/image/*/*", "anon");
+        filterMap.put("/video/*", "anon");
+        filterMap.put("/video/*/*", "anon");
         filterMap.put("/js/*", "anon");
         filterMap.put("/js/*/*", "anon");
         filterMap.put("/favicon.ico", "anon");
@@ -51,6 +53,9 @@ public class ShiroConfig {
         filterMap.put("/user/resetPwd", "anon");
         filterMap.put("/pay/callback", "anon");
         filterMap.put("/sellOrder/listArea", "anon");
+        filterMap.put("/sellOrder/listSonByAreaId", "anon");
+        filterMap.put("/sellOrder/listBondsman", "anon");
+        filterMap.put("/multiUpload", "anon");
         //除了以上路径，其他都需要权限验证
         filterMap.put("/**", "auth");
         shiroFilter.setFilterChainDefinitionMap(filterMap);

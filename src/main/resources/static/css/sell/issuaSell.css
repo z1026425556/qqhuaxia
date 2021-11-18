@@ -1,0 +1,44 @@
+
+.context {
+    text-align: center;
+}
+
+
+.cssStyleSelectDiv {
+    margin: 30px auto 30px auto;
+    min-width: 360px;
+    text-align: center;
+}
+
+.cssStyleSelectDiv .cssStyleSelectFont {
+    width: 55px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.cssStyleSelectDiv .cssStyleSelect {
+    vertical-align: top;
+}
+
+.titleInputText {
+    /*margin: 5px 60px 0;*/
+    display: flex;
+}
+
+.inputElem {
+    width: 300px;
+    height: 36px;
+    border: 1px solid #E0E0E0;
+    padding-left: 10px;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+.js-max-input {
+    border: solid 1px #ffd2b2;
+    position: relative;
+    background: #fffae5;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    color: #ff4400
+}

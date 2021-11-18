@@ -176,4 +176,9 @@ public class UserServiceImpl implements IUserService {
         return result;
     }
 
+    @Override
+    public User findByAccessToken(HttpServletRequest httpRequest) {
+        return shiroService.findByAccessToken(httpRequest.getHeader("token"));
+    }
+
 }

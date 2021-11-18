@@ -2,16 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4097420f-bfad-4f45-8ec3-c9c7335d7eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/BondsmanMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/CombatPetMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/EquipmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/EternalMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/GameNumberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/GoldMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/IngotMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/MountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/PropMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/SpiritMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/WordMoneyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/sell/SellOrderBondsmanMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/sell/SellOrderImgMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/sell/SellOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/sell/SellOrderVideoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/sell/UserSellOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/AreaSon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Bondsman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/CombatPet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Equipment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Eternal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/GameNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Gold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Ingot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Mount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Prop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/Spirit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/WordMoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/IssuaSellParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/SellOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/SellOrderBondsman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/SellOrderImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/SellOrderVideo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/domain/sell/UserSellOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/BondsmanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/CombatPetMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/EquipmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/EternalMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/GameNumberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/GoldMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/IngotMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/MountMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/PropMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/SpiritMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/WordMoneyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/sell/SellOrderBondsmanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/sell/SellOrderImgMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/sell/SellOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/sell/SellOrderVideoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapping/sell/UserSellOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/fileUpload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/sell/issuaSell.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/sell/jquery.fancyspinbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/html/sell/issuaSell.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/fileUpload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/inputTextStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/issuaSell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/jquery.fancyspinbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/textareaStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/SellOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/SellOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/dao/AreaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/ISellOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/ISellOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/SellOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/SellOrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/personalCenter/personalCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/personalCenter/personalCenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/AreaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/AreaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/handBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/handBtn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/sell/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/html/sell/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/personalCenter/personalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/personalCenter/personalCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/sell/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/sell/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/resetPwd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/loginLogout/resetPwd.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +96,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,7 +129,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapping" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapping/sell" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
@@ -67,11 +137,11 @@
       <recent name="com.pengcheng" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\idea_demo\qqhuaxia\src\main\resources\mapping\sell" />
       <recent name="D:\idea_demo\qqhuaxia\src\main\resources\mapping" />
-      <recent name="D:\idea_demo\qqhuaxia\src\main\resources\static\image" />
-      <recent name="D:\idea_demo\qqhuaxia\src\main\resources\static\js" />
       <recent name="D:\idea_demo\qqhuaxia\src\main\resources\static\css" />
-      <recent name="D:\idea_demo\qqhuaxia\src\main\java\com\pengcheng\domain" />
+      <recent name="D:\idea_demo\qqhuaxia\src\main\resources\static\js" />
+      <recent name="D:\idea_demo\qqhuaxia\src\main\resources\static\js\sell" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pengcheng.service.impl" />
@@ -132,7 +202,10 @@
       <workItem from="1636767515828" duration="10299000" />
       <workItem from="1636846246386" duration="29462000" />
       <workItem from="1636893712908" duration="5171000" />
-      <workItem from="1636946179717" duration="4063000" />
+      <workItem from="1636946179717" duration="11905000" />
+      <workItem from="1637020702107" duration="18798000" />
+      <workItem from="1637116981552" duration="11098000" />
+      <workItem from="1637198272196" duration="34255000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交代码">
       <created>1636002850894</created>
@@ -183,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636899355681</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="登出功能">
+      <created>1636960449088</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636960449088</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,25 +277,26 @@
     <MESSAGE value="注册功能" />
     <MESSAGE value="token过期转登录跳转及忘记密码和登录的功能" />
     <MESSAGE value="会员中心和签到以及售卖列表(主页)一部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="会员中心和签到以及售卖列表(主页)一部分" />
+    <MESSAGE value="登出功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="登出功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1636459133807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1636459133807" />
-    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636861910390">
+    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637239384627">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636861910390" />
+    <state x="414" y="175" width="1174" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1637239384627" />
     <state x="667" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636518439382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1636518439382" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1636957285348">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1637234414093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1636957285348" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1637234414093" />
     <state x="739" y="378" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1636199146555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,10 +305,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636783548413" />
-    <state x="560" y="115" key="CommitChangelistDialog2" timestamp="1636899350644">
+    <state x="560" y="115" key="CommitChangelistDialog2" timestamp="1636960446398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1636899350644" />
+    <state x="560" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1636960446398" />
     <state width="438" height="466" key="DebuggerActiveHint" timestamp="1636547804385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,54 +317,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1636716452207" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1636958738507">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1636958738507">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1637242687342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1636958738507">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687342" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1637242687341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1636958738507">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687341" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1637242687342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738507" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687342" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1636958738391">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1637242687343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636958738391" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637242687343" />
     <state x="531" y="182" key="Registry" timestamp="1636509847956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -292,10 +373,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1636509878430" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636899359387">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636960622546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636899359387" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636960622546" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637124356190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1637124356190" />
     <state x="511" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1636690151105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -304,9 +389,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="77" width="786" height="885" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1636894294653" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1637062286605">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1637062286605" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1636896660243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1636896660243" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pengcheng/service/impl/SellOrderServiceImpl.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pengcheng/controller/UploadController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

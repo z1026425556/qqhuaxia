@@ -44,7 +44,7 @@ function addEvent(){
                     return;
                 }
                 if(data.code == "200"){
-                    setCookie("token", data.data.token);
+                    setCookie("token", data.data.token, 12);
                 }
             }
         });

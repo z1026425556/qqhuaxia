@@ -6,6 +6,8 @@
         select id,name from area;
     </select>
 
-
+    <select id="listSonByAreaId" resultType="com.pengcheng.domain.AreaSon">
+        select id,area_id as areaId,name from area_son where area_id=${areaId};
+    </select>
 
 </mapper>

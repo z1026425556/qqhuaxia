@@ -78,6 +78,12 @@ public class UserController {
         return userService.logout(httpRequest);
     }
 
+    @ResponseBody
+    @RequestMapping("/userInfo")
+    public User userInfo(HttpServletRequest httpRequest){
+        return userService.findByAccessToken(httpRequest);
+    }
+
 }
 
 

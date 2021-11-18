@@ -1,7 +1,7 @@
-//cookie的有效时间为12小时
-var cookieExpireTime = 12;
 
-function setCookie(cookieName, cookieValue, ){
+
+
+function setCookie(cookieName, cookieValue, cookieExpireTime){
     var date = new Date();
     date.setTime(date.getTime() + (cookieExpireTime * 60 * 60 * 1000));
     $.cookie(cookieName, cookieValue, { path: '/', expires: date });
@@ -36,5 +36,29 @@ function getQueryString(param){
         return unescape(r[2]);
     }
     return null;
+}
+
+function checkRates(str){
+    //判断字符串如果是整数不能以0开头后面加正整数，如果是浮点数整数部分不能为两个0：如00.00，如果是整数，
+    var re = /^(([1-9][0-9]*\.[0-9][0-9]*)|([0]\.[0-9][0-9]*)|([1-9][0-9]*)|([0]{1}))$/;
+    var Sure;
+    if (!re.test(str)){
+        Sure = 0;
+    }else{
+        Sure = 1;
+    }
+    return Sure;
+}
+
+function checkPositiveInt(str){
+    //正整数
+    var re = /^[0-9]*[1-9][0-9]*$/;
+    var Sure;
+    if (!re.test(str)){
+        Sure = 0;
+    }else{
+        Sure = 1;
+    }
+    return Sure;
 }
 

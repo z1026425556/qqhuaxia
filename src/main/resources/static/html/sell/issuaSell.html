@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sell/issuaSell.css">
+    <link href="../../css/sell/jquery.fancyspinbox.css" rel="stylesheet" type="text/css">
+    <link href="../../css/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../../css/fileUpload.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/handBtn.css">
+    <title>发布售卖</title>
+</head>
+<body>
+    <h1 style="text-align: center;">发布售卖</h1>
+    <div class="context">
+        <div class="cssStyleSelectDiv">
+            <div class="cssStyleSelectFont">
+                分类：
+            </div>
+            <select class="cssStyleSelect" id="typeSelectCtrl" style="margin-right: 75px;">
+                <option value="gameNumber">账号</option>
+                <option value="equipment">装备</option>
+                <option value="spirit">元神</option>
+                <option value="eternal">武魂</option>
+                <option value="combatPet">战魂</option>
+                <option value="5">坐骑</option>
+                <option value="6">道具</option>
+                <option value="7">元宝</option>
+                <option value="8">文钱</option>
+                <option value="9">金币</option>
+            </select>
+            <div class="cssStyleSelectFont">
+                大区：
+            </div>
+            <select class="cssStyleSelect" style="margin-right: 10px;" id="areaSelect">
+
+            </select>
+            <div class="cssStyleSelectFont">
+                小区：
+            </div>
+            <select class="cssStyleSelect" id="areaSonSelect">
+
+            </select>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;">
+            <div>
+                标题：
+            </div>
+            <div class="titleInputText">
+                <input type="text" placeholder="请保持18字之内" class="inputElem" autocomplete="off" maxlength="18" id="title" />
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;margin-top: 30px;">
+            <div>
+                详细说明：
+            </div>
+            <div class="col-md-6" style="width: 370px;height: 150px;">
+                <textarea style="width: 100%;height: 100%;" class='form-control' name='test' onkeyup='textAreaChange(this)' onkeydown='textAreaChange(this)' rows='5' id="detail"></textarea>
+                <div class='text-right' style="text-align: right">
+                    <em style='color:red'>200</em>/<span>200</span>
+                </div>
+            </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;margin-top: 50px;">
+            <div style="color: red;font-weight: bold;font-style: italic;">
+                价格：
+            </div>
+            <div class="titleInputText">
+                <input type="text" style="width: 200px;" placeholder="请输入整数或小数(单位：元)" class="inputElem" autocomplete="off" maxlength="18" id="price" />
+            </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;margin-top: 25px;">
+            <div style="color: red;font-weight: bold;font-style: italic;">
+                微信：
+            </div>
+            <div class="titleInputText">
+                <input id="wxNumber" type="text" style="width: 200px;" placeholder="13269206387" class="inputElem" autocomplete="off" maxlength="18"/>
+            </div>
+        </div>
+        <div>
+            <div class="cssStyleSelectDiv">
+                <div class="cssStyleSelectFont" style="width: 80px;">
+                    可担保人：
+                </div>
+                <select class="cssStyleSelect" id="bondsman" style="margin-right: 75px;">
+
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="cssStyleSelectDiv itemTypeContent" id="gameNumberContent">
+                <div class="cssStyleSelectFont">
+                    职业：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="gameNumberProfession">
+                    <option value="0">战士</option>
+                    <option value="1">法师</option>
+                    <option value="2">暗巫</option>
+                    <option value="3">神医</option>
+                    <option value="4">魔医</option>
+                    <option value="5">弓手</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    等级：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="gameNumberIsBetter">
+                    <option value="0">未进阶</option>
+                    <option value="1">进阶</option>
+                </select>
+                <div class="titleInputText" style="display: inline;">
+                    <input type="text" style="width: 40px;border: 1px solid #166ba9;" placeholder="" class="inputElem" autocomplete="off" maxlength="18" id="level" />
+                    级
+                </div>
+            </div>
+            <div class="cssStyleSelectDiv itemTypeContent" id="equipmentContent">
+                <div class="cssStyleSelectFont">
+                    档次：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="equipmentGrade">
+                    <option value="0">七档</option>
+                    <option value="1">八档</option>
+                    <option value="2">凡品</option>
+                    <option value="3">中品</option>
+                    <option value="4">上品</option>
+                    <option value="5">至尊</option>
+                    <option value="6">其他</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    职业：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="equipmentProfession">
+                    <option value="0">战士</option>
+                    <option value="1">法师</option>
+                    <option value="2">暗巫</option>
+                    <option value="3">神医</option>
+                    <option value="4">魔医</option>
+                    <option value="5">弓手</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    分组：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="equipmentGroup">
+                    <option value="0">套装</option>
+                    <option value="1">散件</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    部位：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="equipmentLocation">
+                    <option value="-1">全部</option>
+                    <option value="0">头盔</option>
+                    <option value="1">护肩</option>
+                    <option value="2">衣服</option>
+                    <option value="3">护腿</option>
+                    <option value="4">披风</option>
+                    <option value="5">腰带</option>
+                    <option value="6">护腕</option>
+                    <option value="7">鞋子</option>
+                    <option value="8">戒指</option>
+                    <option value="9">项链</option>
+                    <option value="10">武器</option>
+                    <option value="11">盾牌</option>
+                </select>
+            </div>
+            <div class="cssStyleSelectDiv itemTypeContent" id="spiritContent">
+                <div class="cssStyleSelectFont">
+                    等阶：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="spiritLevel">
+                    <option value="0">人阶</option>
+                    <option value="1">地阶</option>
+                    <option value="2">天阶</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    职业：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="spiritProfession">
+                    <option value="0">战士</option>
+                    <option value="1">法师</option>
+                    <option value="2">暗巫</option>
+                    <option value="3">神医</option>
+                    <option value="4">魔医</option>
+                    <option value="5">弓手</option>
+                    <option value="6">其他</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    分组：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="spiritGroup">
+                    <option value="0">套装</option>
+                    <option value="1">散件</option>
+                </select>
+            </div>
+            <div class="cssStyleSelectDiv itemTypeContent" id="eternalContent">
+                <div class="cssStyleSelectFont">
+                    分类：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="eternalCategory">
+                    <option value="0">普通武魂</option>
+                    <option value="1">圣武魂</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    细分：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="eternalCategorySon">
+                    <option value="0">青龙</option>
+                    <option value="1">白虎</option>
+                    <option value="2">朱雀</option>
+                    <option value="3">玄武</option>
+                    <option value="4">破天麒麟</option>
+                    <option value="5">怒鲲鹏</option>
+                    <option value="6">凤鸾</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    职业：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="eternalProfession">
+                    <option value="0">战士</option>
+                    <option value="1">法师</option>
+                    <option value="2">暗巫</option>
+                    <option value="3">神医</option>
+                    <option value="4">魔医</option>
+                    <option value="5">弓手</option>
+                    <option value="6">其他</option>
+                </select>
+            </div>
+            <div class="cssStyleSelectDiv itemTypeContent" id="combatPetContent">
+                <div class="cssStyleSelectFont">
+                    种类：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="combatPetProp">
+                    <option value="0">攻击宝宝</option>
+                    <option value="1">防御宝宝</option>
+                </select>
+                <div class="cssStyleSelectFont">
+                    等级：
+                </div>
+                <select class="cssStyleSelect" style="margin-right: 10px;" id="combatPetIsBetter">
+                    <option value="0">未进阶</option>
+                    <option value="1">进阶</option>
+                </select>
+                <div class="titleInputText" style="display: inline;">
+                    <input type="text" style="width: 40px;border: 1px solid #166ba9;" placeholder="" class="inputElem" autocomplete="off" maxlength="18" id="combatPetLevel" />
+                    级
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 25px;">
+            <div style="width: 750px;margin: auto;text-align: left;margin-bottom: 30px;">
+                <b>图片上传:<b style="color: red;float: right;">选择图片之后请点击开始上传！</b></b>
+            </div>
+            <div id="imgUploadContent" class="imgUploadContent uploadContent" style="margin: auto;width: 750px;"></div>
+        </div>
+        <div style="margin-bottom: 25px;">
+            <div style="width: 750px;margin: auto;text-align: left;margin-bottom: 30px;">
+                <b>视频上传:<b style="color: red;float: right;">选择视频之后请点击开始上传！</b></b>
+            </div>
+            <div id="videoUploadContent" class="videoUploadContent uploadContent" style="margin: auto;width: 750px;"></div>
+        </div>
+        <div class="item button-hand handBtnStyle">
+            <button id="viewMoreAreaBtn">发布
+                <div class="hands"></div>
+            </button>
+        </div>
+        <div style="color: red;font-weight: bold;font-style: italic;font-size: 20px;">
+            1：元宝、文钱、金币的上架时间为3天。
+            <br />
+            2：小于500元的商品上架时间为15天。
+            <br />
+            3：超过500元的商品上架时间为30天。
+            <br />
+            4：上架时间过期的商品自动下架，请在个人中心重新上架(建议适当进行降价)。
+        </div>
+    </div>
+    <input type="hidden" id="imgPathSave" />
+    <input type="hidden" id="videoPathSave" />
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/sell/jquery.fancyspinbox.js"></script>
+    <script src="../../js/sell/inputTextStyle.js"></script>
+    <script src="../../js/sell/textareaStyle.js"></script>
+    <script src="../../js/fileUpload.js"></script>
+    <script src="../../js/sell/issuaSell.js"></script>
+</body>
+</html>

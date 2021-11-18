@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengcheng.dao.sell.SellOrderImgMapper">
+
+    <insert id="addBatch" parameterType="java.util.List">
+        insert into sell_order_img(sell_order_id,path) values
+        <foreach collection="list" item="sellOrderImgs" index="index" separator=",">
+            (
+            ${sellOrderImgs.sellOrderId},
+            #{sellOrderImgs.path}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

@@ -113,7 +113,7 @@ function addEvent(){
                 wxNumber : $("#wxNumber").val()
             },
             success : function(data){
-                setCookie("token", data.data.token);
+                setCookie("token", data.data.token, 12);
             }
         });
 

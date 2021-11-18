@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengcheng.dao.CombatPetMapper">
+
+    <insert id="addOne" useGeneratedKeys="true" keyProperty="id" parameterType="com.pengcheng.domain.CombatPet">
+        insert into combat_pet(area_id,area_son_id,is_better,level,prop) values(${areaId},${areaSonId},${isBetter},${level},#{prop});
+    </insert>
+
+</mapper>

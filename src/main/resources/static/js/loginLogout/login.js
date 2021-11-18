@@ -19,11 +19,11 @@ function addEvent(){
             alert("请填写密码！");
             return;
         }
-        setCookie("inputUsername", $("#username").val());
+        setCookie("inputUsername", $("#username").val(), 7 * 12);
         if($("#rememberPwd").prop("checked")){
-            setCookie("inputPwd", $("#password").val());
+            setCookie("inputPwd", $("#password").val(), 7 * 12);
         }else{
-            setCookie("inputPwd", "");
+            setCookie("inputPwd", "", 7 * 12);
         }
         $.ajax({
             url : "/user/login",
@@ -38,7 +38,7 @@ function addEvent(){
                     return;
                 }
                 if(data.code == "200"){
-                    setCookie("token", data.data.token);
+                    setCookie("token", data.data.token, 12);
                 }
                 if(!getQueryString("path")){
                     //跳转到主页
